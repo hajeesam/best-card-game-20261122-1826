@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emberfall Duel — a card duel of flame, tide, leaf and stone</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+  <header id="topbar">
+    <div id="brand">EMBERFALL <span>DUEL</span></div>
+    <div id="top-actions">
+      <button id="sound-btn" type="button" title="Toggle sound">Sound: On</button>
+      <button id="rules-btn" type="button" title="How to play">How to play</button>
+    </div>
+  </header>
+  <main id="stage"></main>
+  <div id="rules-panel" hidden>
+    <h2>How to play</h2>
+    <p>You duel Cinder, keeper of the last ember. Both of you start at <strong>30 life</strong>.</p>
+    <ul>
+      <li>Each turn you gain embers equal to the turn number (up to 10). Embers refill every turn.</li>
+      <li>Play a card by clicking it, or press <strong>1–7</strong> to pick a card and <strong>Enter</strong> to play it.</li>
+      <li>Press <strong>Space</strong> or <strong>E</strong>, or the End Turn button, to pass to Cinder.</li>
+      <li><strong>Resonance:</strong> play two cards of the same suit in one turn and the second one grows stronger (+2 damage, heal or shield, +1 draw).</li>
+      <li>Shield soaks damage first, then fades when your next turn begins — time your guard.</li>
+      <li>Reduce Cinder to 0 life to win. If your life reaches 0, the ember goes out.</li>
+    </ul>
+    <p class="suits-line">Flame burns · Tide draws · Leaf heals · Stone shields.</p>
+    <button id="rules-close" type="button">Close</button>
+  </div>
+  <div id="float-layer"></div>
+</div>
+<script type="module" src="src/main.js"></script>
+<!-- Emberfall Duel: every script and style above is a file under game/ — the duel plays with no network. -->
+</body>
+</html>
